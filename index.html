@@ -1,27 +1,161 @@
-<section id="projects">
-    <h2>My Projects</h2>
-  
-    <div class="project-grid">
-      <article class="project-card">
-        <header>
-          <h3>VibeMusic</h3>
-          <p>Angular, TypeScript</p>
-        </header>
-  
-        <p>A music streaming web application.</p>
-  
-        <footer>
-          <a href="https://github.com/your-account/your-project">
-            View source code
-          </a>
-        </footer>
-      </article>
-    </div>
-    <button
-  id="theme-btn"
-  type="button"
-  aria-pressed="false"
->
-  Toggle dark mode
-</button>
-  </section>
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of an Information Systems student interested in web development and user-focused software.">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <title>To Huyen Chau | Developer Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <nav class="navbar section-shell" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="To Huyen Chau, home">YN<span aria-hidden="true">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-button" id="theme-btn" type="button" aria-pressed="false">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+        <span class="theme-label">Dark mode</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <section class="hero-copy" aria-labelledby="hero-title">
+        <p class="eyebrow">INFORMATION SYSTEMS · WEB DEVELOPMENT</p>
+        <h1 id="hero-title">Building useful things for the <span class="accent-text">web.</span></h1>
+        <p class="hero-lead">Hi, I'm <strong>To Huyen Chau</strong>, an Information Systems student interested in accessible interfaces, thoughtful user experiences, and maintainable software.</p>
+        <ul class="hero-actions" aria-label="Featured actions">
+          <li><a class="button button-primary" href="#projects">Explore my work</a></li>
+          <li><a class="button button-secondary" href="#contact">Contact me</a></li>
+        </ul>
+        <p class="hero-note">Currently learning, building, and improving one commit at a time.</p>
+      </section>
+      <figure class="hero-portrait">
+        <img src="assets/avatar.svg" width="320" height="320" alt="Illustrated avatar placeholder; replace with your own portrait before submission." fetchpriority="high">
+        <figcaption>Curious by nature. Builder by practice.</figcaption>
+      </figure>
+    </section>
+
+    <section class="content-section section-shell" id="about" aria-labelledby="about-title">
+      <p class="eyebrow">A LITTLE ABOUT ME</p>
+      <h2 id="about-title">About me</h2>
+      <p class="section-intro">I'm an Information Systems student who enjoys connecting technology and real user needs. I'm interested in front-end development, requirements analysis, and building products that are clear, usable, and reliable.</p>
+      <ul class="about-points">
+        <li><strong>Mindset</strong><span>Understand the problem before writing code.</span></li>
+        <li><strong>Approach</strong><span>Prefer semantic structure and small, testable changes.</span></li>
+        <li><strong>Current focus</strong><span>HTML, CSS, JavaScript, accessibility, and Git.</span></li>
+      </ul>
+    </section>
+
+    <section class="content-section section-shell" id="skills" aria-labelledby="skills-title">
+      <p class="eyebrow">TOOLS IN MY TOOLBOX</p>
+      <h2 id="skills-title">Skills &amp; tools</h2>
+      <p class="section-intro">A snapshot of the technologies and practices I am developing through coursework and personal projects.</p>
+      <ul class="skill-grid">
+        <li class="skill-card">
+          <h3>Frontend</h3>
+          <ul class="badge-list" aria-label="Frontend skills"><li class="badge">HTML5</li><li class="badge">CSS3</li><li class="badge">JavaScript</li><li class="badge">Responsive UI</li></ul>
+        </li>
+        <li class="skill-card">
+          <h3>Developer tools</h3>
+          <ul class="badge-list" aria-label="Developer tools"><li class="badge">Git</li><li class="badge">GitHub</li><li class="badge">Chrome DevTools</li><li class="badge">VS Code</li></ul>
+        </li>
+        <li class="skill-card">
+          <h3>Information Systems</h3>
+          <ul class="badge-list" aria-label="Information Systems skills"><li class="badge">SQL</li><li class="badge">Requirements</li><li class="badge">Process analysis</li><li class="badge">Documentation</li></ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section section-shell" id="projects" aria-labelledby="projects-title">
+      <p class="eyebrow">SELECTED WORK</p>
+      <h2 id="projects-title">Projects</h2>
+      <p class="section-intro">These cards are editable portfolio content. Keep only projects you actually worked on, and replace descriptions or links so they accurately describe your work.</p>
+      <ul class="project-grid">
+        <li>
+          <article class="project-card">
+            <header class="card-header">
+              <p class="project-number">PROJECT 01</p>
+              <h3>VibeMusic</h3>
+              <p class="project-tech">Angular · TypeScript · CSS</p>
+            </header>
+            <p>A music web application concept with a customizable interface and a focus on the listening experience.</p>
+            <ul class="badge-list" aria-label="VibeMusic technologies"><li class="badge">Angular</li><li class="badge">TypeScript</li><li class="badge">UI</li></ul>
+            <footer class="card-footer"><p class="link-pending">Add your real repository or demo URL before publishing.</p></footer>
+          </article>
+        </li>
+        <li>
+          <article class="project-card">
+            <header class="card-header">
+              <p class="project-number">PROJECT 02</p>
+              <h3>Developer Portfolio</h3>
+              <p class="project-tech">HTML5 · CSS3 · JavaScript</p>
+            </header>
+            <p>A responsive portfolio demonstrating semantic markup, CSS design tokens, keyboard navigation, and persistent theme selection.</p>
+            <ul class="badge-list" aria-label="Portfolio technologies"><li class="badge">Accessibility</li><li class="badge">Responsive</li><li class="badge">Vanilla JS</li></ul>
+            <footer class="card-footer">
+              <a href="https://github.com/hchaupanjcwtf06/24520211_ToHuyenChau_Lab01" target="_blank" rel="noopener noreferrer">View lab repository <span aria-hidden="true">↗</span></a>
+            </footer>
+          </article>
+        </li>
+        <li>
+          <article class="project-card">
+            <header class="card-header">
+              <p class="project-number">PROJECT 03</p>
+              <h3>Database Coursework</h3>
+              <p class="project-tech">SQL · Data modelling</p>
+            </header>
+            <p>A coursework project exploring relational data, database queries, and the structure of information systems.</p>
+            <ul class="badge-list" aria-label="Database project technologies"><li class="badge">SQL</li><li class="badge">Database</li><li class="badge">Analysis</li></ul>
+            <footer class="card-footer"><p class="link-pending">Add a public repository or demo link if available.</p></footer>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section class="content-section section-shell" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">LET'S CONNECT</p>
+      <h2 id="contact-title">Contact</h2>
+      <p class="section-intro">Use the form to prepare an email. This static portfolio does not send messages to a server; it opens your email application instead.</p>
+      <form class="contact-form" id="contact-form">
+        <fieldset>
+          <legend>Send a message</legend>
+          <label for="contact-name">To Huyen Chau</label>
+          <input id="contact-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required>
+
+          <label for="contact-email-input">Your email</label>
+          <input id="contact-email-input" name="email" type="email" autocomplete="email" maxlength="120" required>
+
+          <label for="contact-subject">Subject</label>
+          <input id="contact-subject" name="subject" type="text" minlength="2" maxlength="120" required>
+
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="5" minlength="10" maxlength="2000" required></textarea>
+          <p class="field-hint" id="message-hint">Please write at least 10 characters.</p>
+
+          <button class="button button-primary" type="submit">Prepare email</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </fieldset>
+      </form>
+      <p class="contact-direct">Prefer email? <a id="contact-email-link" href="mailto:your.email@example.com">your.email@example.com</a></p>
+      <p class="contact-hint">Before submission, replace the sample email address in this page with your real contact email.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell">
+    <p>© <span id="current-year">2026</span> To Huyen Chau. Built with semantic HTML, CSS, and JavaScript.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
