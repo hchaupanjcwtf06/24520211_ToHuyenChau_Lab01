@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +8,32 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <script type="module">
+    import { AudioEngine } from "./js/audio-engine.js";
+    import { initializeKeyboard } from "./js/input-handler.js";
+  
+    const pads = document.querySelectorAll(".drum-pad");
+  
+    // Use each data-sound path as the sound identifier.
+    const soundPaths = Object.fromEntries(
+      Array.from(pads, (pad) => [
+        pad.dataset.sound,
+        pad.dataset.sound
+      ])
+    );
+  
+    const engine = new AudioEngine(soundPaths);
+  
+    function activatePad(pad) {
+      engine.play(pad.dataset.sound);
+    }
+  
+    initializeKeyboard({
+      pads,
+      activatePad
+    });
+  </script>
+
   <header class="page-header">
     <h1>Drum Kit</h1>
     <p>Choose a pad to play a drum sound.</p>
