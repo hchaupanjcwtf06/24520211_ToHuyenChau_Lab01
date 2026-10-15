@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 dd6d105b4254a2e6eb7add73a2258a237e8341f4 hchaupanjcwtf06 <24520211@gm.uit.edu.vn> 1792068344 +0700	commit (initial): feat(js): implement form state machine
-dd6d105b4254a2e6eb7add73a2258a237e8341f4 0d034a76f1e6323827c80623f78de4b8c1454252 hchaupanjcwtf06 <24520211@gm.uit.edu.vn> 1792068740 +0700	commit: fix(security): prevent duplicate submissions and XSS
-0d034a76f1e6323827c80623f78de4b8c1454252 43d6130b30dafd2fcd96eed91bcba9c6cdc9126d hchaupanjcwtf06 <24520211@gm.uit.edu.vn> 1792068903 +0700	commit: feat(js): implement UTC countdown engine
-43d6130b30dafd2fcd96eed91bcba9c6cdc9126d d6ca57bd3256b2459ed5c0ac377a014a6fa6d8f9 hchaupanjcwtf06 <24520211@gm.uit.edu.vn> 1792068913 +0700	commit: docs: document landing page project
-d6ca57bd3256b2459ed5c0ac377a014a6fa6d8f9 eeaf288eccad1f59d20310168d49490315b737c5 hchaupanjcwtf06 <24520211@gm.uit.edu.vn> 1792069076 +0700	commit: docs: add AI failure audit report
