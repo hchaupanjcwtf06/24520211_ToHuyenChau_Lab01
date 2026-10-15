@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Engine Tests</title>
+</head>
+<body>
+  <h1>Countdown Engine Tests</h1>
+  <pre id="results"></pre>
+  <script type="module">
+    import { getRemainingTime } from "./js/countdown.js";
+
+    const results = document.querySelector("#results");
+
+    function test(name, condition) {
+      results.textContent += `${condition ? "PASS" : "FAIL"} — ${name}\n`;
+      if (!condition) console.error(`FAIL — ${name}`);
+    }
+
+    const target = "2026-12-31T17:00:00Z";
+    const deadline = Date.parse(target);
+
+    const result = getRemainingTime(target, deadline - 90000);
+    test("90 seconds remaining", result.minutes === 1 && result.seconds === 30);
+    test("deadline is expired", getRemainingTime(target, deadline).expired);
+    test("past deadline is expired", getRemainingTime(target, deadline + 5000).expired);
+    test("UTC timestamp parses", Number.isFinite(deadline));
+
+    try {
+      getRemainingTime("not-a-timestamp");
+      test("invalid timestamp is rejected", false);
+    } catch {
+      test("invalid timestamp is rejected", true);
+    }
+  </script>
+</body>
+</html>
