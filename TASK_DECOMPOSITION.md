@@ -10,11 +10,11 @@ Build a responsive developer portfolio using semantic HTML5, modern CSS, and Van
 ## 2. Mandatory milestones
 
 ### M1 — WCAG 2.2 AA audit
-- [ ] Review semantic landmarks and heading hierarchy.
-- [ ] Ensure the page has one primary `h1`.
-- [ ] Check text contrast against WCAG 2.2 AA requirements.
-- [ ] Verify the skip link and visible keyboard focus.
-- [ ] Check both light and dark themes, if both are implemented.
+- [x] Review semantic landmarks and heading hierarchy.
+- [x] Ensure the page has one primary `h1`.
+- [x] Check text contrast against WCAG 2.2 AA requirements.
+- [x] Verify the skip link and visible keyboard focus.
+- [x] Check both light and dark themes, if both are implemented.
 - [ ] Record issues found, fixes applied, and verification results.
 - **Required commit:** `fix(a11y): contrast & landmarks`
 
