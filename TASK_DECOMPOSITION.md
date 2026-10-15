@@ -15,15 +15,16 @@ Build a responsive developer portfolio using semantic HTML5, modern CSS, and Van
 - [x] Check text contrast against WCAG 2.2 AA requirements.
 - [x] Verify the skip link and visible keyboard focus.
 - [x] Check both light and dark themes, if both are implemented.
-- [ ] Record issues found, fixes applied, and verification results.
+- [x] Record issues found, fixes applied, and verification results.
 - **Required commit:** `fix(a11y): contrast & landmarks`
 
 ### M2 — Focus trap audit
-- [ ] Test `Tab` and `Shift+Tab` navigation throughout the page.
-- [ ] Test keyboard activation of links and buttons.
-- [ ] Check that focus is not trapped unintentionally.
-- [ ] If a modal/dialog is implemented, verify focus entry, exit, and restoration.
-- [ ] Record the audit result. If no modal exists, document that fact rather than adding one solely for this audit.
+- [x] Test `Tab` and `Shift+Tab` navigation throughout the page.
+- [x] Test keyboard activation of links and buttons.
+- [x] Check that focus is not trapped unintentionally.
+- [x] If a modal/dialog is implemented, verify focus entry, exit, and restoration.
+- [x] Record the audit result. If no modal exists, document that fact rather than adding one solely for this audit.
+- Audit result: no issues observed during the checks performed.
 - **Required commit:** `fix(nav): keyboard trap prevention`
 
 ### M3 — Strict CSP and zero inline handlers
