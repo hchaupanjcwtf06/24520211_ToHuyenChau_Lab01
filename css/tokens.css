@@ -1,0 +1,26 @@
+:root {
+    color-scheme: light;
+  
+    --bg-primary: #ffffff;
+    --text-primary: #172033;
+    --bg-card: #f3f5f9;
+    --border-color: #cbd5e1;
+    --accent: #075985;
+  
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+  
+    --content-width: 70rem;
+  }
+  
+  [data-theme="dark"] {
+    color-scheme: dark;
+  
+    --bg-primary: #0f172a;
+    --text-primary: #f8fafc;
+    --bg-card: #1e293b;
+    --border-color: #475569;
+    --accent: #7dd3fc;
+  }

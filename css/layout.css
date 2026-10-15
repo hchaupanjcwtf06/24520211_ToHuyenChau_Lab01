@@ -1,0 +1,18 @@
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: system-ui, sans-serif;
+  }
+  
+  header,
+  main,
+  footer {
+    width: min(100% - 2rem, var(--content-width));
+    margin-inline: auto;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+    gap: var(--space-3);
+  }
