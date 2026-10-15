@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio Engine Test</title>
+</head>
+<body>
+  <h1>Audio Engine Test</h1>
+
+  <button id="test-kick">Test Kick</button>
+  <button id="test-overlap">Test Overlapping Sounds</button>
+  <button id="test-missing">Test Missing Sound</button>
+  <button id="test-stop">Stop All</button>
+
+  <script type="module">
+    import { AudioEngine } from "./js/audio-engine.js";
+
+    const engine = new AudioEngine({
+      kick: "./assets/sounds/kick.wav",
+      snare: "./assets/sounds/snare.wav"
+    });
+
+    document.querySelector("#test-kick").addEventListener("click", () => {
+      engine.play("kick");
+    });
+
+    document.querySelector("#test-overlap").addEventListener("click", () => {
+      engine.play("kick");
+      engine.play("snare");
+    });
+
+    document.querySelector("#test-missing").addEventListener("click", () => {
+      engine.play("unknown-sound");
+    });
+
+    document.querySelector("#test-stop").addEventListener("click", () => {
+      engine.stopAll();
+    });
+  </script>
+</body>
+</html>
