@@ -11,7 +11,8 @@
   <script type="module">
     import { AudioEngine } from "./js/audio-engine.js";
     import { initializeKeyboard } from "./js/input-handler.js";
-  
+    import { BeatRecorder } from "./js/beat-recorder.js";
+
     const pads = document.querySelectorAll(".drum-pad");
   
     // Use each data-sound path as the sound identifier.
@@ -23,14 +24,55 @@
     );
   
     const engine = new AudioEngine(soundPaths);
-  
-    function activatePad(pad) {
+    const recorder = new BeatRecorder();
+
+    const status = document.querySelector("#recorder-status");
+    const recordButton = document.querySelector("#record-button");
+    const stopButton = document.querySelector("#stop-button");
+    const replayButton = document.querySelector("#replay-button");
+
+    function activatePad(pad, { fromReplay = false } = {}) {
       engine.play(pad.dataset.sound);
+
+      if (!fromReplay) {
+        recorder.record(pad.dataset.key);
+      }
     }
   
     initializeKeyboard({
       pads,
       activatePad
+    });
+
+    recordButton.addEventListener("click", () => {
+  recorder.startRecording();
+  status.textContent = "Recording...";
+});
+
+stopButton.addEventListener("click", () => {
+  const recording = recorder.stopRecording();
+  status.textContent = `Recording stopped. ${recording.length} beat(s) recorded.`;
+});
+
+    replayButton.addEventListener("click", () => {
+      const recording = recorder.getRecording();
+
+      if (recording.length === 0) {
+        status.textContent = "No beats recorded yet.";
+        return;
+      }
+
+      status.textContent = "Replaying...";
+
+      recorder.replay((key) => {
+        const pad = Array.from(pads).find(
+          (item) => item.dataset.key.toLowerCase() === key
+        );
+
+        if (pad) {
+          activatePad(pad, { fromReplay: true });
+        }
+      });
     });
   </script>
 
@@ -85,6 +127,17 @@
         <span class="pad-key" aria-hidden="true">F</span>
       </button>
     </section>
+
+    
+    <section class="recorder-controls" aria-label="Beat recorder controls">
+      <button id="record-button" type="button">Record</button>
+      <button id="stop-button" type="button">Stop</button>
+      <button id="replay-button" type="button">Replay</button>
+      <p id="recorder-status" role="status" aria-live="polite">
+        Ready to record.
+      </p>
+    </section>
+
   </main>
 </body>
 </html>
